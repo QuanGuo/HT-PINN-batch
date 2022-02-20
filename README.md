@@ -11,15 +11,15 @@ Please note this work:
 
 ## Data
 
-**heads/heads_pump<id>**: Hydraulic heads under each pumping test (solved with FEM)
+**heads/heads_pump<id>.txt**: Hydraulic heads under each pumping test (solved with FEM)
    
-**logK_field**: natural log hydraulic conductivity field (lnK)
+**logK_field.txt**: natural log hydraulic transmissivity field (lnT)
    
-**alpha_vector**: hidden random variables used to generated logK field with PCA realization generation method
+**alpha_vector.txt**: hidden random variables used to generated logT field with PCA realization generation method
    
-**K_measure_id_61**: idx of direct measurement on hydraulic conductivity on domain mesh
+**K_measure_id_61.txt**: idx of direct measurement on hydraulic conductivity on domain mesh
    
-**pump_well_id_25**: idx of pumping wells on domain mesh
+**pump_well_id_25.txt**: idx of pumping wells on domain mesh
    
  
 ## Model Training (model_coeff)
@@ -27,13 +27,20 @@ Please note this work:
 recommended hyper-parameters are saved in **hyper_parameters.txt**
    
 A well trained HT-PINN are saved as:
-    inverse model: **inverse.pth**
-    forward models:
-        $NN^{1}$ at pump well 1: **forward_0.pth**
-        $NN^{5}$ at pump well 5: **forward_4.pth**
-        $NN^{13}$ at pump well 13: **forward_12.pth**
-        $NN^{21}$ at pump well 21: **forward_20.pth**
-        $NN^{25}$ at pump well 25: **forward_24.pth**
+   
+    inverse model (TNN): **inverse.pth**
+   
+    forward models at different pumping wells:
+   
+        Pumping well 1 (NN^{1}): **forward_0.pth**
+   
+        Pumping well 5 (NN^{5}): **forward_4.pth**
+   
+        Pumping well 13 (NN^{13}): **forward_12.pth**
+   
+        Pumping well 21 (NN^{21}): **forward_20.pth**
+   
+        Pumping well 25 (NN^{25}): **forward_24.pth**
    
    
 ## How to use
