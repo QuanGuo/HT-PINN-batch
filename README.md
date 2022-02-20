@@ -11,7 +11,7 @@ Please note this work:
 
 ## Data
 
-**heads/heads_pump<id>.txt**: Hydraulic heads under each pumping test (solved with FEM)
+**heads/heads_pump\<id\>.txt**: Hydraulic heads under each pumping test (solved with FEM)
    
 **logK_field.txt**: natural log hydraulic transmissivity field (lnT)
    
@@ -24,25 +24,15 @@ Please note this work:
  
 ## Model Training (model_coeff)
    
-recommended hyper-parameters are saved in **hyper_parameters.txt**
+Recommended hyper-parameters are saved in **hyper_parameters.txt**
    
-A well trained HT-PINN are saved as:
+A well-trained HT-PINN is saved as:
    
-    inverse model (TNN): **inverse.pth**
+   * inverse model (TNN): **inverse.pth**
    
-    forward models at different pumping wells:
-   
-        Pumping well 1 (NN^{1}): **forward_0.pth**
-   
-        Pumping well 5 (NN^{5}): **forward_4.pth**
-   
-        Pumping well 13 (NN^{13}): **forward_12.pth**
-   
-        Pumping well 21 (NN^{21}): **forward_20.pth**
-   
-        Pumping well 25 (NN^{25}): **forward_24.pth**
-   
-   
+   * forward models at different pumping wells: **forward_\<id\>pth** 
+
+
 ## How to use
 
 1) Clone.
